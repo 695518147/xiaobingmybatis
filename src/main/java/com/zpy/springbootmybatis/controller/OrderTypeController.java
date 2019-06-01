@@ -3,6 +3,7 @@ package com.zpy.springbootmybatis.controller;
 import com.zpy.springbootmybatis.entity.Ordertype;
 import com.zpy.springbootmybatis.mapper.OrdertypeMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,6 +18,7 @@ public class OrderTypeController {
     private OrdertypeMapper ordertypeMapper;
 
     @GetMapping("/orderTypes")
+    @Cacheable(value = "orderTypes" ,key = "targetClass + methodName +#p0")
     public List<Ordertype> findAll(){
         Ordertype ordertype = new Ordertype();
         return ordertypeMapper.queryOrdertype(ordertype);
