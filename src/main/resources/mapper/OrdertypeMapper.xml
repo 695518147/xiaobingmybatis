@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.zpy.springbootmybatis.mapper.OrdertypeMapper">
+<mapper namespace="com.zpy.xiaobingmybatis.mapper.OrdertypeMapper">
 
 
-    <resultMap type="com.zpy.springbootmybatis.entity.Ordertype" id="OrdertypeMap">
+    <resultMap type="com.zpy.xiaobingmybatis.entity.Ordertype" id="OrdertypeMap">
         <result property="id" column="id"/>
         <result property="orderTypeName" column="orderTypeName"/>
         <result property="number" column="number"/>
         <result property="createTime" column="createTime"/>
         <result property="show" column="isShow"/>
-        <collection property="orders" ofType="com.zpy.springbootmybatis.entity.Order">
+        <collection property="orders" ofType="com.zpy.xiaobingmybatis.entity.Order">
             <id property="id" column="orderId"/>
             <result property="orderName" column="orderName"/>
             <result property="show" column="order_isShow"/>

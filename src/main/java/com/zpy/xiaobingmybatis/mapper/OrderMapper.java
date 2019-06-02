@@ -1,6 +1,6 @@
-package com.zpy.springbootmybatis.mapper;
+package com.zpy.xiaobingmybatis.mapper;
 
-import com.zpy.springbootmybatis.entity.Order;
+import com.zpy.xiaobingmybatis.entity.Order;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;

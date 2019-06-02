@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.zpy.springbootmybatis.mapper.OrderMapper">
+<mapper namespace="com.zpy.xiaobingmybatis.mapper.OrderMapper">
 
 
     <insert id="insertOrder" useGeneratedKeys="true" keyProperty="id">
@@ -282,7 +282,7 @@
     </update>
 
 
-    <resultMap type="com.zpy.springbootmybatis.entity.Order" id="OrderMap">
+    <resultMap type="com.zpy.xiaobingmybatis.entity.Order" id="OrderMap">
         <result property="id" column="id"/>
         <result property="orderName" column="orderName"/>
         <result property="show" column="isShow"/>

@@ -1,4 +1,4 @@
-package com.zpy.springbootmybatis;
+package com.zpy.xiaobingmybatis;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

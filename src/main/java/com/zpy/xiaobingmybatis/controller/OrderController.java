@@ -1,21 +1,22 @@
-package com.zpy.springbootmybatis.controller;
+package com.zpy.xiaobingmybatis.controller;
 
 
-import com.zpy.springbootmybatis.entity.Order;
-import com.zpy.springbootmybatis.mapper.OrderMapper;
+import com.zpy.xiaobingmybatis.entity.Order;
+import com.zpy.xiaobingmybatis.mapper.OrderMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 @RestController
 @RequestMapping("/xiaobing")
 public class OrderController {
 
-    @Autowired
+    @Resource
     private OrderMapper orderMapper;
 
     @GetMapping("/orders")

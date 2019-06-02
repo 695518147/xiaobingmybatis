@@ -1,10 +1,7 @@
-package com.zpy.springbootmybatis.entity;
+package com.zpy.xiaobingmybatis.entity;
 import lombok.Data;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.List;
 /**
 *

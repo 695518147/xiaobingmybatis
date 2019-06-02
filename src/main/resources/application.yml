@@ -22,7 +22,7 @@ spring:
 
 mybatis:
   mapper-locations: classpath:mapper/*.xml
-  type-aliases-package: com.zpy.springbootmybatis.entity
+  type-aliases-package: com.zpy.xiaobingmybatis.entity
 
 
 #showSql
@@ -30,7 +30,7 @@ mybatis:
 #  level:
 #    com:
 #      zpy:
-#        springbootmybatis:
+#        xiaobingmybatis:
 #          mapper : debug
 
   #时间戳统一转换
