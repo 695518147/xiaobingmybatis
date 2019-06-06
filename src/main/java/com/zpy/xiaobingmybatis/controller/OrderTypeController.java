@@ -2,6 +2,7 @@ package com.zpy.xiaobingmybatis.controller;
 
 import com.zpy.xiaobingmybatis.entity.Ordertype;
 import com.zpy.xiaobingmybatis.mapper.OrdertypeMapper;
+import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,5 +23,11 @@ public class OrderTypeController {
     public List<Ordertype> findAll(){
         Ordertype ordertype = new Ordertype();
         return ordertypeMapper.queryOrdertype(ordertype);
+    }
+
+    @GetMapping("/clear/orderTypes")
+    @CacheEvict(value = "orderTypes",allEntries = true)
+    public void clear(){
+
     }
 }

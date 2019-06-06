@@ -2,7 +2,7 @@ package com.zpy.xiaobingmybatis.controller;
 
 import com.zpy.xiaobingmybatis.entity.Tip;
 import com.zpy.xiaobingmybatis.mapper.TipMapper;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,5 +22,11 @@ public class TipController {
     @Cacheable(value = "tips" ,key = "targetClass + methodName +#p0")
     public List<Tip> findAll(){
         return tipMapper.queryTips();
+    }
+
+    @GetMapping("/clear/tips")
+    @CacheEvict(value = "tips",allEntries = true)
+    public void clear(){
+
     }
 }

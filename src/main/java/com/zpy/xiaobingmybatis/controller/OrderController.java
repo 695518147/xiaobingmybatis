@@ -4,6 +4,7 @@ package com.zpy.xiaobingmybatis.controller;
 import com.zpy.xiaobingmybatis.entity.Order;
 import com.zpy.xiaobingmybatis.mapper.OrderMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,4 +27,9 @@ public class OrderController {
         return orderMapper.queryOrder(order);
     }
 
+    @GetMapping("/clear/orders")
+    @CacheEvict(value = "orders",allEntries = true)
+    public void clear(){
+
+    }
 }
